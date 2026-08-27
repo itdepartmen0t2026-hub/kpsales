@@ -1,0 +1,52 @@
+
+{% extends 'base.html' %}
+
+{% block title %}
+Home | Solution Experts Plast
+{% endblock %}
+{% block content %}
+{% load static %}
+    <header class="page-hero">
+        <div class="container">
+            <div class="eyebrow text-white">KP Sales</div>
+            <h1 class="display-5 fw-bold">Let's Start a Conversation</h1>
+            <p class="lead">Tell us about your business, product or project requirement.</p>
+        </div>
+    </header>
+    <section class="section">
+        <div class="container">
+            <div class="row g-5">
+                <div class="col-lg-5">
+                    <div class="eyebrow">Get in touch</div>
+                    <h2 class="section-title">We are ready to hear your requirement.</h2>
+                    <p class="muted">Add your official phone number, email address and office location here before
+                        deployment.</p>
+                    <div class="glass-card p-4 mt-4"><strong>Business Enquiries</strong>
+                        <p class="mb-1 mt-2">Phone: Add official number</p>
+                        <p class="mb-0">Email: Add official email</p>
+                    </div>
+                </div>
+                <div class="col-lg-7">
+                    <form class="glass-card p-4">
+                        <div class="row g-3">
+                            <div class="col-md-6"><input class="form-control" placeholder="Your Name"></div>
+                            <div class="col-md-6"><input class="form-control" placeholder="Company Name"></div>
+                            <div class="col-md-6"><input class="form-control" placeholder="Email Address"></div>
+                            <div class="col-md-6"><input class="form-control" placeholder="Phone Number"></div>
+                            <div class="col-12"><select class="form-select form-control">
+                                    <option>Choose Requirement</option>
+                                    <option>Product Enquiry</option>
+                                    <option>Project Requirement</option>
+                                    <option>Career</option>
+                                </select></div>
+                            <div class="col-12"><textarea rows="6" class="form-control"
+                                    placeholder="Tell us about your requirement"></textarea></div>
+                            <div class="col-12"><button type="button" class="btn btn-premium">Send Enquiry</button>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+   {% endblock %}

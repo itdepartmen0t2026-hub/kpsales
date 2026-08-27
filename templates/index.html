@@ -1,0 +1,141 @@
+
+
+{% extends 'base.html' %}
+
+{% block title %}
+Home | Solution Experts Plast
+{% endblock %}
+{% block content %}
+{% load static %}
+
+  
+    <header class="hero">
+        <div class="container">
+            <div class="eyebrow mb-3">Construction chemical solutions</div>
+            <h1 class="display-title">ENGINEERED FOR<br>STRONGER <span style="color:#ff6a5f">PROJECTS.</span></h1>
+            <p class="my-4">KP Sales brings focused product categories, responsive business support and
+                quality-documentation awareness to construction projects.</p><a href="products.html"
+                class="btn btn-premium me-2">Explore Products</a><a href="contact.html" class="btn btn-ghost">Talk to
+                Our Team</a>
+        </div>
+        <div class="float-card"><small>PROJECT SUPPORT</small>
+            <h5 class="mt-2 mb-0">Clear communication. Focused solutions.</h5>
+        </div>
+    </header>
+    <section class="stats-wrap">
+        <div class="container">
+            <div class="row g-3">
+                <div class="col-md-4">
+                    <div class="stat">
+                        <h3 data-count="3">0+</h3>
+                        <p class="mb-0">Core Solution Categories</p>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="stat">
+                        <h3 data-count="7">0+</h3>
+                        <p class="mb-0">Dedicated Website Sections</p>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="stat">
+                        <h3 data-count="89">0+</h3>
+                        <p class="mb-0">Source Document Pages Referenced</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="section">
+        <div class="container">
+            <div class="row align-items-center g-5">
+                <div class="col-lg-6 reveal">
+                    <div class="eyebrow">Who we are</div>
+                    <h2 class="section-title">A modern partner for construction requirements.</h2>
+                    <p class="muted fs-5">Our approach is straightforward: understand the requirement, identify the
+                        relevant solution category and coordinate responsive next steps.</p><a href="about.html"
+                        class="btn btn-premium">Discover KP</a>
+                </div>
+                <div class="col-lg-6 reveal">
+                    <div class="image-panel"><img src="{% static 'assets/img/doc-2.jpg' %}">
+                        <div class="badge-panel"><strong>QUALITY-LED APPROACH</strong>
+                            <p class="mb-0 mt-2">Documentation and product-category clarity are built into our
+                                presentation.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="section bg-light">
+        <div class="container">
+            <div class="eyebrow">Our focus</div>
+            <h2 class="section-title mb-5">Solutions designed around practical project needs.</h2>
+            <div class="row g-4">
+                <div class="col-md-4 reveal">
+                    <div class="service-card">
+                        <div class="icon">01</div>
+                        <h4>Concrete Admixtures</h4>
+                        <p class="muted">Focused support for admixture-related requirements and enquiries.</p>
+                    </div>
+                </div>
+                <div class="col-md-4 reveal">
+                    <div class="service-card">
+                        <div class="icon">02</div>
+                        <h4>Curing Solutions</h4>
+                        <p class="muted">Product-category support around curing compound requirements.</p>
+                    </div>
+                </div>
+                <div class="col-md-4 reveal">
+                    <div class="service-card">
+                        <div class="icon">03</div>
+                        <h4>Sealants & Primers</h4>
+                        <p class="muted">Solutions for sealant and primer-oriented project applications.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="section dark">
+        <div class="container">
+            <div class="row g-5 align-items-center">
+                <div class="col-lg-5 reveal">
+                    <div class="eyebrow">Why KP</div>
+                    <h2 class="section-title">Confidence starts with clarity.</h2>
+                </div>
+                <div class="col-lg-7">
+                    <div class="row g-4">
+                        <div class="col-sm-6 reveal">
+                            <h4>Responsive Support</h4>
+                            <p class="muted">Clear communication from first enquiry to next-step coordination.</p>
+                        </div>
+                        <div class="col-sm-6 reveal">
+                            <h4>Focused Categories</h4>
+                            <p class="muted">A concise presentation built around relevant construction chemical
+                                categories.</p>
+                        </div>
+                        <div class="col-sm-6 reveal">
+                            <h4>Documentation Awareness</h4>
+                            <p class="muted">Quality pages visually reference the supplied source approval material.</p>
+                        </div>
+                        <div class="col-sm-6 reveal">
+                            <h4>Modern Experience</h4>
+                            <p class="muted">A responsive digital presence built for every device.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="section">
+        <div class="container">
+            <div class="cta text-center reveal">
+                <div class="eyebrow text-white">Let's build better</div>
+                <h2 class="fw-bold display-6">Have a project requirement?</h2>
+                <p class="fs-5">Tell us what you need and start the conversation with KP Sales.</p><a
+                    href="contact.html" class="btn btn-light rounded-pill px-4 py-3 fw-bold">Request a Quote</a>
+            </div>
+        </div>
+    </section>
+ 
+  {% endblock %}

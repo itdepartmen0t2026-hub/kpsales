@@ -1,0 +1,76 @@
+
+{% extends 'base.html' %}
+
+{% block title %}
+Home | Solution Experts Plast
+{% endblock %}
+{% block content %}
+{% load static %}
+    <header class="product-banner" style="background-image:url('{% static 'assets/img/admixtures.jpg' %}')">
+        <div class="container">
+            <div class="breadcrumb-mini">Home / Products</div>
+            <h1>Admixtures</h1>
+        </div>
+    </header>
+    <section class="product-page">
+        <div class="container">
+            <div class="row g-5">
+                <section class="col-lg-8">
+                    <div class="product-listing">
+                        <article class="detail-product featured">
+                            <div>
+                                <h2>Concrete Admixture Solutions</h2>
+                                <h6>Admixtures Category</h6>
+                                <p>Products for relevant concrete and construction applications.</p>
+                            </div>
+                            <div class="product-actions">
+                                <a href="contact.html" class="download-btn">Request TDS <span>↓</span></a>
+                                <a href="contact.html" class="download-btn">Request Product Information
+                                    <span>↓</span></a>
+                            </div>
+                        </article>
+                        <article class="detail-product">
+                            <div>
+                                <h2>Project Requirements</h2>
+                                <h6>Admixtures Category</h6>
+                                <p>Share the application and quantity to check suitable product availability.</p>
+                            </div>
+                            <div class="product-actions">
+                                <a href="contact.html" class="download-btn">Request TDS <span>↓</span></a>
+                                <a href="contact.html" class="download-btn">Request Product Information
+                                    <span>↓</span></a>
+                            </div>
+                        </article>
+                        <article class="detail-product">
+                            <div>
+                                <h2>Bulk Enquiries</h2>
+                                <h6>Admixtures Category</h6>
+                                <p>Commercial and project supply coordination for larger requirements.</p>
+                            </div>
+                            <div class="product-actions">
+                                <a href="contact.html" class="download-btn">Request TDS <span>↓</span></a>
+                                <a href="contact.html" class="download-btn">Request Product Information
+                                    <span>↓</span></a>
+                            </div>
+                        </article>
+                    </div>
+                </section>
+                <aside class="col-lg-4">
+                    <div class="sidebar-search"><input type="search" placeholder="Search products"
+                            aria-label="Search products"><button type="button">⌕</button></div>
+                    <h3 class="sidebar-title">Admixtures Category</h3>
+                    <div class="sidebar-accent"></div>
+                    <ul class="category-list">
+                        <li><a href="#" class="active">All</a></li>
+                        <li><a href='#'>Concrete Admixtures</a></li>
+                        <li><a href='#'>Workability</a></li>
+                        <li><a href='#'>Project Supply</a></li>
+                    </ul>
+                    <div class="mt-4"><a class="btn btn-premium w-100 text-center" href="contact.html">Request a
+                            Quote</a></div>
+                </aside>
+            </div>
+        </div>
+    </section>
+    
+    {% endblock %}

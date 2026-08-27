@@ -1,0 +1,42 @@
+{% extends 'base.html' %}
+
+{% block title %}
+Home | Solution Experts Plast
+{% endblock %}
+{% block content %}
+{% load static %}
+<header class="page-hero">
+        <div class="container">
+            <div class="eyebrow text-white">KP Sales</div>
+            <h1 class="display-5 fw-bold">About Us</h1>
+            <p class="lead">KP Sales presents a focused, modern approach to construction chemical requirements.</p>
+        </div>
+    </header>
+    <section class="section">
+        <div class="container">
+            <div class="row g-5 align-items-center">
+                <div class="col-lg-6">
+                    <div class="image-panel"><img src="{% static 'assets/img/doc-3.jpg' %}"></div>
+                </div>
+                <div class="col-lg-6">
+                    <div class="eyebrow">Our approach</div>
+                    <h2 class="section-title">Simple process. Professional support.</h2>
+                    <div class="timeline mt-4">
+                        <div class="timeline-item">
+                            <h5>Understand</h5>
+                            <p class="muted">Start with the product or project requirement.</p>
+                        </div>
+                        <div class="timeline-item">
+                            <h5>Coordinate</h5>
+                            <p class="muted">Align the enquiry with the relevant solution category.</p>
+                        </div>
+                        <div class="timeline-item">
+                            <h5>Support</h5>
+                            <p class="muted">Maintain clear communication for next steps.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+ {% endblock %}

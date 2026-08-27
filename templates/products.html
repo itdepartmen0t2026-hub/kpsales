@@ -1,0 +1,156 @@
+
+{% extends 'base.html' %}
+
+{% block title %}
+Home | Solution Experts Plast
+{% endblock %}
+{% block content %}
+{% load static %}
+    <header class="page-hero">
+        <div class="container">
+            <div class="eyebrow text-white">KP Sales</div>
+            <h1 class="display-5 fw-bold">Product Categories</h1>
+            <p class="lead">Explore the core construction chemical categories represented in our website.</p>
+        </div>
+    </header>
+  <section class="product-line-section">
+
+    <div class="container">
+
+        <div class="section-heading text-center">
+            <h2>OUR PRODUCT LINE</h2>
+            <span></span>
+        </div>
+
+        <div class="row g-4">
+
+            <!-- Product 1 -->
+            <div class="col-lg-3 col-md-6">
+                <a href="{% url 'product' %}" class="product-box">
+
+                    <img src="assets/img/waterproofing.jpg"
+                         alt="Waterproofing">
+
+                    <!-- <div class="product-overlay">
+                        <div class="plus-icon">+</div>
+                        <h3>Waterproofing</h3>
+                    </div> -->
+                         <div class="product-title">
+                        Waterproofing
+                    </div>
+
+                </a>
+            </div>
+
+
+            <!-- Product 2 -->
+            <div class="col-lg-3 col-md-6">
+                <a href="#" class="product-box">
+
+                    <img src="assets/img/road-surfacing.jpg"
+                         alt="Road Surfacing">
+
+                    <div class="product-title">
+                        Road Surfacing
+                    </div>
+
+                </a>
+            </div>
+
+
+            <!-- Product 3 -->
+            <div class="col-lg-3 col-md-6">
+                <a href="#" class="product-box">
+
+                    <img src="assets/img/flooring.jpg"
+                         alt="Flooring">
+
+                    <div class="product-title">
+                        Flooring
+                    </div>
+
+                </a>
+            </div>
+
+
+            <!-- Product 4 -->
+            <div class="col-lg-3 col-md-6">
+                <a href="#" class="product-box">
+
+                    <img src="assets/img/repair-rehabilitation.jpg"
+                         alt="Repair & Rehabilitation">
+
+                    <div class="product-title">
+                        Repair & Rehabilitation
+                    </div>
+
+                </a>
+            </div>
+
+
+            <!-- Product 5 -->
+            <div class="col-lg-3 col-md-6">
+                <a href="#" class="product-box">
+
+                    <img src="assets/img/protective-coatings.jpg"
+                         alt="Primers">
+
+                    <div class="product-title">
+                        Primers
+                    </div>
+
+                </a>
+            </div>
+
+
+            <!-- Product 6 -->
+            <div class="col-lg-3 col-md-6">
+                <a href="#" class="product-box">
+
+                    <img src="assets/img/admixtures.jpg"
+                         alt="Admixtures">
+
+                    <div class="product-title">
+                        Admixtures
+                    </div>
+
+                </a>
+            </div>
+
+
+            <!-- Product 7 -->
+            <div class="col-lg-3 col-md-6">
+                <a href="#" class="product-box">
+
+                    <img src="assets/img/grouts.jpg"
+                         alt="Grouts">
+
+                    <div class="product-title">
+                        Grouts
+                    </div>
+
+                </a>
+            </div>
+
+
+            <!-- Product 8 -->
+            <div class="col-lg-3 col-md-6">
+                <a href="#" class="product-box">
+
+                    <img src="assets/img/sealants-adhesives.jpg"
+                         alt="Sealants">
+
+                    <div class="product-title">
+                        Sealants & Adhesives
+                    </div>
+
+                </a>
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+{% endblock %}
