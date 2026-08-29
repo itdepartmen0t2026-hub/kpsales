@@ -144,8 +144,9 @@ Requirement:
     # )
 
 def allproduct(request):
-   
-    return render(request,'products.html')
+    pro=ProductCategory.objects.all()
+    
+    return render(request,'products.html',{"pro":pro})
 
 def product(request):
     

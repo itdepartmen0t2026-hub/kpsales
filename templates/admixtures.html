@@ -1,4 +1,3 @@
-
 {% extends 'base.html' %}
 
 {% block title %}
@@ -6,71 +5,1259 @@ Home | Solution Experts Plast
 {% endblock %}
 {% block content %}
 {% load static %}
-    <header class="product-banner" style="background-image:url('{% static 'assets/img/admixtures.jpg' %}')">
-        <div class="container">
-            <div class="breadcrumb-mini">Home / Products</div>
-            <h1>Admixtures</h1>
-        </div>
-    </header>
-    <section class="product-page">
-        <div class="container">
-            <div class="row g-5">
-                <section class="col-lg-8">
-                    <div class="product-listing">
-                        <article class="detail-product featured">
-                            <div>
-                                <h2>Concrete Admixture Solutions</h2>
-                                <h6>Admixtures Category</h6>
-                                <p>Products for relevant concrete and construction applications.</p>
-                            </div>
-                            <div class="product-actions">
-                                <a href="contact.html" class="download-btn">Request TDS <span>↓</span></a>
-                                <a href="contact.html" class="download-btn">Request Product Information
-                                    <span>↓</span></a>
-                            </div>
-                        </article>
-                        <article class="detail-product">
-                            <div>
-                                <h2>Project Requirements</h2>
-                                <h6>Admixtures Category</h6>
-                                <p>Share the application and quantity to check suitable product availability.</p>
-                            </div>
-                            <div class="product-actions">
-                                <a href="contact.html" class="download-btn">Request TDS <span>↓</span></a>
-                                <a href="contact.html" class="download-btn">Request Product Information
-                                    <span>↓</span></a>
-                            </div>
-                        </article>
-                        <article class="detail-product">
-                            <div>
-                                <h2>Bulk Enquiries</h2>
-                                <h6>Admixtures Category</h6>
-                                <p>Commercial and project supply coordination for larger requirements.</p>
-                            </div>
-                            <div class="product-actions">
-                                <a href="contact.html" class="download-btn">Request TDS <span>↓</span></a>
-                                <a href="contact.html" class="download-btn">Request Product Information
-                                    <span>↓</span></a>
-                            </div>
-                        </article>
-                    </div>
-                </section>
-                <aside class="col-lg-4">
-                    <div class="sidebar-search"><input type="search" placeholder="Search products"
-                            aria-label="Search products"><button type="button">⌕</button></div>
-                    <h3 class="sidebar-title">Admixtures Category</h3>
-                    <div class="sidebar-accent"></div>
-                    <ul class="category-list">
-                        <li><a href="#" class="active">All</a></li>
-                        <li><a href='#'>Concrete Admixtures</a></li>
-                        <li><a href='#'>Workability</a></li>
-                        <li><a href='#'>Project Supply</a></li>
-                    </ul>
-                    <div class="mt-4"><a class="btn btn-premium w-100 text-center" href="contact.html">Request a
-                            Quote</a></div>
-                </aside>
+    <style>
+
+     
+        /* =========================================
+           HERO / CATEGORY BANNER
+        ========================================= */
+
+        .category-banner {
+            height: 310px;
+            position: relative;
+
+            background-image:
+                url("{% static 'assets/img/admixtures.jpg' %} ");
+
+            background-size: cover;
+            background-position: center;
+
+            display: flex;
+            align-items: center;
+        }
+
+        .category-banner::before {
+            content: "";
+            position: absolute;
+            inset: 0;
+
+            background:
+                linear-gradient(
+                    90deg,
+                    rgba(0,0,0,.70),
+                    rgba(0,0,0,.35),
+                    rgba(0,0,0,.20)
+                );
+        }
+
+        .banner-content {
+            position: relative;
+            z-index: 2;
+            color: #fff;
+        }
+
+        .breadcrumb-text {
+            font-size: 13px;
+            font-weight: 600;
+            margin-bottom: 18px;
+            letter-spacing: .5px;
+        }
+
+        .category-title {
+            font-size: 48px;
+            font-weight: 800;
+            letter-spacing: -1px;
+        }
+
+        /* =========================================
+           PRODUCT SECTION
+        ========================================= */
+
+        .products-section {
+            padding: 55px 0 80px;
+        }
+
+        .product-list {
+            padding-right: 15px;
+        }
+
+        /* =========================================
+           PRODUCT CARD
+        ========================================= */
+
+        .product-card {
+            margin-top: 10px;
+            position: relative;
+
+            display: grid;
+            grid-template-columns: 1fr 215px;
+
+            gap: 30px;
+
+            padding: 24px;
+
+            border-bottom: 1px solid #ddd;
+
+            animation: fadeUp .7s ease both;
+
+            transition: all .3s ease;
+        }
+
+        .product-card:hover {
+            transform: translateX(5px);
+        }
+
+        @keyframes fadeUp {
+
+            from {
+                opacity: 0;
+                transform: translateY(25px);
+            }
+
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+
+        }
+
+        .product-card:nth-child(2) {
+            animation-delay: .1s;
+        }
+
+        .product-card:nth-child(3) {
+            animation-delay: .2s;
+        }
+
+        .product-card:nth-child(4) {
+            animation-delay: .3s;
+        }
+
+        .product-card:nth-child(5) {
+            animation-delay: .4s;
+        }
+
+        .product-card:nth-child(6) {
+            animation-delay: .5s;
+        }
+
+        .product-card:nth-child(7) {
+            animation-delay: .6s;
+        }
+
+        /* =========================================
+           FEATURED PRODUCT
+        ========================================= */
+
+        .product-card.featured {
+            background: #bd1818;
+            color: #fff;
+
+            padding: 24px;
+
+            margin-bottom: 0;
+
+            border: none;
+        }
+
+        .product-card.featured h2,
+        .product-card.featured .product-subtitle,
+        .product-card.featured .product-description {
+            color: #fff;
+        }
+
+        .product-card.featured:hover {
+            background: #a91414;
+            transform: translateX(5px);
+        }
+
+        /* =========================================
+           PRODUCT CONTENT
+        ========================================= */
+
+        .product-name {
+            font-size: 26px;
+            font-weight: 700;
+
+            color: #b31919;
+
+            margin-bottom: 7px;
+        }
+
+        .product-card.featured .product-name {
+            color: #fff;
+        }
+
+        .product-subtitle {
+            font-size: 12px;
+            font-weight: 600;
+            color: #333;
+
+            margin-bottom: 14px;
+        }
+
+        .product-description {
+            font-size: 11px;
+            line-height: 1.7;
+            color: #555;
+
+            margin-bottom: 0;
+        }
+
+        .product-description p {
+            margin-bottom: 7px;
+        }
+
+        .product-description ul {
+            padding-left: 18px;
+        }
+
+        /* =========================================
+           BUTTONS
+        ========================================= */
+
+        .product-actions {
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+            justify-content: center;
+        }
+
+        .download-btn {
+            height: 45px;
+
+            border: 1px solid #bd1818;
+
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+
+            padding: 0 14px;
+
+            color: #bd1818;
+
+            text-decoration: none;
+
+            font-size: 11px;
+            font-weight: 700;
+
+            transition: all .3s ease;
+        }
+
+        .download-btn:hover {
+            background: #bd1818;
+            color: #fff;
+            transform: translateX(4px);
+        }
+
+        .featured .download-btn {
+            color: #fff;
+            border-color: rgba(255,255,255,.8);
+        }
+
+        .featured .download-btn:hover {
+            background: #fff;
+            color: #bd1818;
+        }
+
+        .download-btn i {
+            font-size: 14px;
+        }
+
+        /* =========================================
+           SIDEBAR
+        ========================================= */
+
+        .sidebar {
+            padding-left: 15px;
+        }
+
+        /* Search */
+
+        .search-box {
+            display: flex;
+
+            border: 1px solid #ccc;
+
+            height: 45px;
+
+            margin-bottom: 45px;
+        }
+
+        .search-box input {
+            width: 100%;
+
+            border: none;
+            outline: none;
+
+            padding: 0 15px;
+
+            font-size: 13px;
+        }
+
+        .search-box button {
+            width: 50px;
+
+            border: none;
+
+            border-left: 1px solid #ddd;
+
+            background: #fff;
+
+            color: #222;
+
+            transition: .3s;
+        }
+
+        .search-box button:hover {
+            background: #bd1818;
+            color: #fff;
+        }
+
+        /* Category title */
+
+        .sidebar-title {
+            font-size: 21px;
+            font-weight: 800;
+
+            color: #172c40;
+
+            margin-bottom: 10px;
+        }
+
+        .red-line {
+            width: 70px;
+            height: 3px;
+
+            background: #bd1818;
+
+            margin-bottom: 12px;
+        }
+
+        /* Category list */
+
+        .category-list {
+            list-style: none;
+
+            padding: 0;
+            margin: 0;
+        }
+
+        .category-list li {
+            border-bottom: 1px solid #e5e5e5;
+        }
+
+        .category-list a {
+            display: block;
+
+            padding: 10px 0;
+
+            text-decoration: none;
+
+            color: #333;
+
+            font-size: 12px;
+
+            transition: all .25s ease;
+        }
+
+        .category-list a:hover,
+        .category-list a.active {
+            color: #bd1818;
+            padding-left: 5px;
+        }
+
+        /* =========================================
+           FOOTER
+        ========================================= */
+
+
+        /* =========================================
+           RESPONSIVE
+        ========================================= */
+
+        @media (max-width: 991px) {
+
+
+            .category-banner {
+                height: 250px;
+            }
+
+            .category-title {
+                font-size: 38px;
+            }
+
+            .product-card {
+                grid-template-columns: 1fr;
+            }
+
+            .product-actions {
+                flex-direction: row;
+            }
+
+            .download-btn {
+                flex: 1;
+            }
+
+            .sidebar {
+                padding-left: 0;
+                margin-top: 45px;
+            }
+
+        }
+
+        @media (max-width: 575px) {
+
+            .category-banner {
+                height: 210px;
+            }
+
+            .category-title {
+                font-size: 31px;
+            }
+
+            .breadcrumb-text {
+                font-size: 11px;
+            }
+
+            .products-section {
+                padding: 30px 0 50px;
+            }
+
+            .product-card {
+                padding: 20px 0;
+            }
+
+            .product-card.featured {
+                padding: 20px;
+            }
+
+            .product-name {
+                font-size: 22px;
+            }
+
+            .product-actions {
+                flex-direction: column;
+            }
+
+            .download-btn {
+                width: 100%;
+            }
+
+            .sidebar-title {
+                font-size: 19px;
+            }
+
+        }
+
+    </style>
+
+
+
+
+<!-- =========================================
+     CATEGORY BANNER
+========================================= -->
+
+<section class="category-banner">
+
+    <div class="container">
+
+        <div class="banner-content">
+
+            <div class="breadcrumb-text">
+
+                HOME / PRODUCTS
+
             </div>
+
+            <h1 class="category-title">
+
+                Waterproofing
+
+            </h1>
+
         </div>
-    </section>
-    
-    {% endblock %}
+
+    </div>
+
+</section>
+
+
+
+<!-- =========================================
+     PRODUCTS
+========================================= -->
+
+<section class="products-section">
+
+    <div class="container">
+
+        <div class="row">
+
+
+            <!-- =================================
+                 LEFT PRODUCT LIST
+            ================================= -->
+
+            <div class="col-lg-8">
+
+                <div class="product-list">
+
+
+                    <!-- PRODUCT 1 -->
+
+                    <article class="product-card featured">
+
+                        <div>
+
+                            <h2 class="product-name">
+
+                                ShaliCryl® LM
+
+                            </h2>
+
+                            <div class="product-subtitle">
+
+                                Energy Saving Micro Fiber Reinforced
+                                Acrylic Liquid Membrane
+
+                            </div>
+
+                            <div class="product-description">
+
+                                <p>
+                                    Single component, energy saving,
+                                    UV resistant, elastomeric,
+                                    micro fiber reinforced,
+                                    heavy duty monolithic /
+                                    seamless waterproofing liquid membrane.
+                                </p>
+
+                                <p>
+                                    Suitable for demanding waterproofing
+                                    applications requiring a durable
+                                    seamless membrane.
+                                </p>
+
+                            </div>
+
+                        </div>
+
+
+                        <div class="product-actions">
+
+                            <a
+                                href="#"
+                                class="download-btn">
+
+                                <span>
+                                    Download TDS
+                                </span>
+
+                                <i class="bi bi-arrow-down"></i>
+
+                            </a>
+
+                            <a
+                                href="#"
+                                class="download-btn">
+
+                                <span>
+                                    Download MSDS
+                                </span>
+
+                                <i class="bi bi-arrow-down"></i>
+
+                            </a>
+
+                        </div>
+
+                    </article>
+
+
+
+                    <!-- PRODUCT 2 -->
+
+                    <article class="product-card">
+
+                        <div>
+
+                            <h2 class="product-name">
+
+                                ShaliCryl® LM HI
+
+                            </h2>
+
+                            <div class="product-subtitle">
+
+                                Energy Saving Heat Insulative
+                                Reinforced Acrylic Liquid WP Membrane
+
+                            </div>
+
+                            <div class="product-description">
+
+                                <p>
+                                    Single component, energy saving,
+                                    UV resistant, elastomeric,
+                                    reinforced acrylic waterproofing membrane.
+                                </p>
+
+                                <p>
+                                    Designed for waterproofing and
+                                    protection applications.
+                                </p>
+
+                            </div>
+
+                        </div>
+
+
+                        <div class="product-actions">
+
+                            <a href="#" class="download-btn">
+
+                                <span>Download TDS</span>
+
+                                <i class="bi bi-arrow-down"></i>
+
+                            </a>
+
+                            <a href="#" class="download-btn">
+
+                                <span>Download MSDS</span>
+
+                                <i class="bi bi-arrow-down"></i>
+
+                            </a>
+
+                        </div>
+
+                    </article>
+
+
+
+                    <!-- PRODUCT 3 -->
+
+                    <article class="product-card featured">
+
+                        <div>
+
+                            <h2 class="product-name">
+
+                                ShaliCryl® 215
+
+                            </h2>
+
+                            <div class="product-subtitle">
+
+                                UV Resistant Elastomeric Acrylic
+                                Waterproof Coating
+
+                            </div>
+
+                            <div class="product-description">
+
+                                <p>
+                                    Single component UV resistant,
+                                    elastomeric acrylic coating
+                                    designed for waterproofing
+                                    and surface protection.
+                                </p>
+
+                            </div>
+
+                        </div>
+
+
+                        <div class="product-actions">
+
+                            <a href="#" class="download-btn">
+
+                                <span>Download TDS</span>
+
+                                <i class="bi bi-arrow-down"></i>
+
+                            </a>
+
+                            <a href="#" class="download-btn">
+
+                                <span>Download MSDS</span>
+
+                                <i class="bi bi-arrow-down"></i>
+
+                            </a>
+
+                        </div>
+
+                    </article>
+
+
+
+                    <!-- PRODUCT 4 -->
+
+                    <article class="product-card">
+
+                        <div>
+
+                            <h2 class="product-name">
+
+                                ShaliCryl® TC 100 E
+
+                            </h2>
+
+                            <div class="product-subtitle">
+
+                                Water / Dirt Repellent UV Resistant
+                                Acrylic Top Coat
+
+                            </div>
+
+                            <div class="product-description">
+
+                                <p>
+                                    Single component, UV resistant,
+                                    excellent water and dirt repellent
+                                    acrylic coating for exterior
+                                    surfaces.
+                                </p>
+
+                            </div>
+
+                        </div>
+
+
+                        <div class="product-actions">
+
+                            <a href="#" class="download-btn">
+
+                                <span>Download TDS</span>
+
+                                <i class="bi bi-arrow-down"></i>
+
+                            </a>
+
+                            <a href="#" class="download-btn">
+
+                                <span>Download MSDS</span>
+
+                                <i class="bi bi-arrow-down"></i>
+
+                            </a>
+
+                        </div>
+
+                    </article>
+
+
+
+                    <!-- PRODUCT 5 -->
+
+                    <article class="product-card featured">
+
+                        <div>
+
+                            <h2 class="product-name">
+
+                                ShaliCryl® TC 100 ES
+
+                            </h2>
+
+                            <div class="product-subtitle">
+
+                                Water Resistant Acrylic Exterior
+                                Coating
+
+                            </div>
+
+                            <div class="product-description">
+
+                                <p>
+                                    High performance acrylic
+                                    protective coating for
+                                    exterior waterproofing applications.
+                                </p>
+
+                            </div>
+
+                        </div>
+
+
+                        <div class="product-actions">
+
+                            <a href="#" class="download-btn">
+
+                                <span>Download TDS</span>
+
+                                <i class="bi bi-arrow-down"></i>
+
+                            </a>
+
+                            <a href="#" class="download-btn">
+
+                                <span>Download MSDS</span>
+
+                                <i class="bi bi-arrow-down"></i>
+
+                            </a>
+
+                        </div>
+
+                    </article>
+
+
+
+                    <!-- PRODUCT 6 -->
+
+                    <article class="product-card">
+
+                        <div>
+
+                            <h2 class="product-name">
+
+                                ShaliCem® EWP
+
+                            </h2>
+
+                            <div class="product-subtitle">
+
+                                2K Cementitious Exterior Waterproofing
+                                Coating
+
+                            </div>
+
+                            <div class="product-description">
+
+                                <p>
+                                    Two component cementitious
+                                    waterproofing coating suitable
+                                    for concrete and masonry surfaces.
+                                </p>
+
+                            </div>
+
+                        </div>
+
+
+                        <div class="product-actions">
+
+                            <a href="#" class="download-btn">
+
+                                <span>Download TDS</span>
+
+                                <i class="bi bi-arrow-down"></i>
+
+                            </a>
+
+                            <a href="#" class="download-btn">
+
+                                <span>Download MSDS</span>
+
+                                <i class="bi bi-arrow-down"></i>
+
+                            </a>
+
+                        </div>
+
+                    </article>
+
+
+
+                    <!-- PRODUCT 7 -->
+
+                    <article class="product-card featured">
+
+                        <div>
+
+                            <h2 class="product-name">
+
+                                ShaliCem® EWP 150
+
+                            </h2>
+
+                            <div class="product-subtitle">
+
+                                2K Cementitious Waterproofing Coating
+
+                            </div>
+
+                            <div class="product-description">
+
+                                <p>
+                                    Two component cementitious
+                                    waterproofing coating designed
+                                    for demanding waterproofing
+                                    requirements.
+                                </p>
+
+                            </div>
+
+                        </div>
+
+
+                        <div class="product-actions">
+
+                            <a href="#" class="download-btn">
+
+                                <span>Download TDS</span>
+
+                                <i class="bi bi-arrow-down"></i>
+
+                            </a>
+
+                            <a href="#" class="download-btn">
+
+                                <span>Download MSDS</span>
+
+                                <i class="bi bi-arrow-down"></i>
+
+                            </a>
+
+                        </div>
+
+                    </article>
+
+
+
+                    <!-- PRODUCT 8 -->
+
+                    <article class="product-card">
+
+                        <div>
+
+                            <h2 class="product-name">
+
+                                ShaliCem® EWP 200
+
+                            </h2>
+
+                            <div class="product-subtitle">
+
+                                2K Cementitious Waterproofing Coating
+
+                            </div>
+
+                            <div class="product-description">
+
+                                <p>
+                                    Cementitious waterproofing
+                                    system for concrete structures
+                                    and wet areas.
+                                </p>
+
+                            </div>
+
+                        </div>
+
+
+                        <div class="product-actions">
+
+                            <a href="#" class="download-btn">
+
+                                <span>Download TDS</span>
+
+                                <i class="bi bi-arrow-down"></i>
+
+                            </a>
+
+                            <a href="#" class="download-btn">
+
+                                <span>Download MSDS</span>
+
+                                <i class="bi bi-arrow-down"></i>
+
+                            </a>
+
+                        </div>
+
+                    </article>
+
+
+
+                    <!-- PRODUCT 9 -->
+
+                    <article class="product-card featured">
+
+                        <div>
+
+                            <h2 class="product-name">
+
+                                ShaliCem® EWP AR
+
+                            </h2>
+
+                            <div class="product-subtitle">
+
+                                Acrylic Reinforced Cementitious
+                                Waterproofing Coating
+
+                            </div>
+
+                            <div class="product-description">
+
+                                <p>
+                                    Cementitious waterproofing
+                                    system enhanced with acrylic
+                                    reinforcement for improved
+                                    durability and performance.
+                                </p>
+
+                            </div>
+
+                        </div>
+
+
+                        <div class="product-actions">
+
+                            <a href="#" class="download-btn">
+
+                                <span>Download TDS</span>
+
+                                <i class="bi bi-arrow-down"></i>
+
+                            </a>
+
+                            <a href="#" class="download-btn">
+
+                                <span>Download MSDS</span>
+
+                                <i class="bi bi-arrow-down"></i>
+
+                            </a>
+
+                        </div>
+
+                    </article>
+
+
+
+                    <!-- PRODUCT 10 -->
+
+                    <article class="product-card">
+
+                        <div>
+
+                            <h2 class="product-name">
+
+                                ShaliCrete®
+
+                            </h2>
+
+                            <div class="product-subtitle">
+
+                                Acrylic Polymer Coating
+
+                            </div>
+
+                            <div class="product-description">
+
+                                <p>
+                                    Acrylic based waterproofing
+                                    and protective coating for
+                                    construction applications.
+                                </p>
+
+                            </div>
+
+                        </div>
+
+
+                        <div class="product-actions">
+
+                            <a href="#" class="download-btn">
+
+                                <span>Download TDS</span>
+
+                                <i class="bi bi-arrow-down"></i>
+
+                            </a>
+
+                            <a href="#" class="download-btn">
+
+                                <span>Download MSDS</span>
+
+                                <i class="bi bi-arrow-down"></i>
+
+                            </a>
+
+                        </div>
+
+                    </article>
+
+
+                </div>
+
+            </div>
+
+
+
+            <!-- =================================
+                 RIGHT SIDEBAR
+            ================================= -->
+
+            <div class="col-lg-4">
+
+                <aside class="sidebar">
+
+
+                    <!-- SEARCH -->
+
+                    <form class="search-box">
+
+                        <input
+                            type="text"
+                            placeholder="Search products"
+                        >
+
+                        <button type="submit">
+
+                            <i class="bi bi-search"></i>
+
+                        </button>
+
+                    </form>
+
+
+
+                    <!-- CATEGORY -->
+
+                    <h3 class="sidebar-title">
+
+                        Waterproofing Category
+
+                    </h3>
+
+                    <div class="red-line"></div>
+
+
+                    <ul class="category-list">
+
+                        <li>
+
+                            <a href="#" class="active">
+
+                                All
+
+                            </a>
+
+                        </li>
+
+                        <li>
+
+                            <a href="#">
+
+                                Acrylic
+
+                            </a>
+
+                        </li>
+
+                        <li>
+
+                            <a href="#">
+
+                                Bituminous
+
+                            </a>
+
+                        </li>
+
+                        <li>
+
+                            <a href="#">
+
+                                Cementitious Products
+
+                            </a>
+
+                        </li>
+
+                        <li>
+
+                            <a href="#">
+
+                                Chemical Waterproofing
+
+                            </a>
+
+                        </li>
+
+                        <li>
+
+                            <a href="#">
+
+                                Crystalline Products
+
+                            </a>
+
+                        </li>
+
+                        <li>
+
+                            <a href="#">
+
+                                Poly Urea
+
+                            </a>
+
+                        </li>
+
+                        <li>
+
+                            <a href="#">
+
+                                Polyurethane
+
+                            </a>
+
+                        </li>
+
+                        <li>
+
+                            <a href="#">
+
+                                Preformed Membrane
+
+                            </a>
+
+                        </li>
+
+                        <li>
+
+                            <a href="#">
+
+                                Sealant
+
+                            </a>
+
+                        </li>
+
+                        <li>
+
+                            <a href="#">
+
+                                TPO
+
+                            </a>
+
+                        </li>
+
+                        <li>
+
+                            <a href="#">
+
+                                Drain Boards
+
+                            </a>
+
+                        </li>
+
+                    </ul>
+
+
+                </aside>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+
+
+
+{% endblock %}
