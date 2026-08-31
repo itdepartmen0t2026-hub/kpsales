@@ -5,66 +5,256 @@ Home | Solution Experts Plast
 {% endblock %}
 {% block content %}
 {% load static %}
-    <header class="page-hero">
-        <div class="container">
-            <div class="eyebrow text-white">KP Sales</div>
-            <h1 class="display-5 fw-bold">Our Services</h1>
-            <p class="lead">Focused support from initial enquiry through practical coordination.</p>
+
+<section class="services-hero">
+    <div class="container">
+        <div class="services-hero-content">
+            <span class="services-label">KP SALES</span>
+
+            <h1>Our Services</h1>
+
+            <p>
+                Practical construction-chemical support from product selection
+                to project coordination.
+            </p>
         </div>
-    </header>
-    <section class="section">
-        <div class="container">
-            <div class="row g-4">
-                <div class="col-md-4 reveal">
-                    <div class="service-card">
-                        <div class="icon">01</div>
-                        <h4>Product Consultation</h4>
-                        <p class="muted">Professional communication and requirement-focused coordination for your
-                            business or project.</p>
+    </div>
+</section>
+
+
+<!-- Services Section -->
+<section class="services-section py-5">
+    <div class="container">
+
+        <!-- Section Heading -->
+        <div class="text-center services-heading mb-5">
+
+            <span class="section-subtitle">
+                WHAT WE OFFER
+            </span>
+
+            <h2>
+                Reliable support for your
+                <span>construction requirements.</span>
+            </h2>
+
+            <p>
+                KP Sales provides responsive product guidance, technical
+                coordination and business support for construction and
+                infrastructure requirements.
+            </p>
+
+        </div>
+
+
+        <!-- Services Cards -->
+        <div class="row g-4">
+
+            <!-- 01 -->
+            <div class="col-lg-4 col-md-6">
+                <div class="service-card">
+
+                    <div class="service-number">
+                        01
                     </div>
-                </div>
-                <div class="col-md-4 reveal">
-                    <div class="service-card">
-                        <div class="icon">02</div>
-                        <h4>Project Enquiries</h4>
-                        <p class="muted">Professional communication and requirement-focused coordination for your
-                            business or project.</p>
+
+                    <div class="service-icon">
+                        <i class="bi bi-box-seam"></i>
                     </div>
-                </div>
-                <div class="col-md-4 reveal">
-                    <div class="service-card">
-                        <div class="icon">03</div>
-                        <h4>Requirement Coordination</h4>
-                        <p class="muted">Professional communication and requirement-focused coordination for your
-                            business or project.</p>
-                    </div>
-                </div>
-                <div class="col-md-4 reveal">
-                    <div class="service-card">
-                        <div class="icon">04</div>
-                        <h4>Business Support</h4>
-                        <p class="muted">Professional communication and requirement-focused coordination for your
-                            business or project.</p>
-                    </div>
-                </div>
-                <div class="col-md-4 reveal">
-                    <div class="service-card">
-                        <div class="icon">05</div>
-                        <h4>Documentation Review</h4>
-                        <p class="muted">Professional communication and requirement-focused coordination for your
-                            business or project.</p>
-                    </div>
-                </div>
-                <div class="col-md-4 reveal">
-                    <div class="service-card">
-                        <div class="icon">06</div>
-                        <h4>Responsive Communication</h4>
-                        <p class="muted">Professional communication and requirement-focused coordination for your
-                            business or project.</p>
-                    </div>
+
+                    <h3>Product Consultation</h3>
+
+                    <p>
+                        Get the right construction chemical for your
+                        application. We help you understand product options,
+                        applications, specifications and suitable solutions
+                        for your project requirements.
+                    </p>
+
+                    <a href="{% url 'contact' %}" class="service-link">
+                        Discuss Your Requirement
+                        <i class="bi bi-arrow-right"></i>
+                    </a>
+
                 </div>
             </div>
+
+
+            <!-- 02 -->
+            <div class="col-lg-4 col-md-6">
+                <div class="service-card">
+
+                    <div class="service-number">
+                        02
+                    </div>
+
+                    <div class="service-icon">
+                        <i class="bi bi-building"></i>
+                    </div>
+
+                    <h3>Project Enquiries</h3>
+
+                    <p>
+                        Share your project details with KP Sales and we
+                        coordinate suitable products and solution categories
+                        for your specific construction application.
+                    </p>
+
+                    <a href="{% url 'contact' %}" class="service-link">
+                        Start an Enquiry
+                        <i class="bi bi-arrow-right"></i>
+                    </a>
+
+                </div>
+            </div>
+
+
+            <!-- 03 -->
+            <div class="col-lg-4 col-md-6">
+                <div class="service-card">
+
+                    <div class="service-number">
+                        03
+                    </div>
+
+                    <div class="service-icon">
+                        <i class="bi bi-diagram-3"></i>
+                    </div>
+
+                    <h3>Requirement Coordination</h3>
+
+                    <p>
+                        We understand your technical and quantity
+                        requirements and coordinate with the relevant
+                        product and technical teams.
+                    </p>
+
+                    <a href="{% url 'contact' %}" class="service-link">
+                        Coordinate With Us
+                        <i class="bi bi-arrow-right"></i>
+                    </a>
+
+                </div>
+            </div>
+
+
+            <!-- 04 -->
+            <div class="col-lg-4 col-md-6">
+                <div class="service-card">
+
+                    <div class="service-number">
+                        04
+                    </div>
+
+                    <div class="service-icon">
+                        <i class="bi bi-briefcase"></i>
+                    </div>
+
+                    <h3>Business Support</h3>
+
+                    <p>
+                        KP Sales supports dealers, contractors and businesses
+                        with product information, quotations, availability
+                        coordination and ongoing business communication.
+                    </p>
+
+                    <a href="{% url 'contact' %}" class="service-link">
+                        Talk to KP Sales
+                        <i class="bi bi-arrow-right"></i>
+                    </a>
+
+                </div>
+            </div>
+
+
+            <!-- 05 -->
+            <div class="col-lg-4 col-md-6">
+                <div class="service-card">
+
+                    <div class="service-number">
+                        05
+                    </div>
+
+                    <div class="service-icon">
+                        <i class="bi bi-file-earmark-text"></i>
+                    </div>
+
+                    <h3>Documentation Review</h3>
+
+                    <p>
+                        We help coordinate product datasheets, technical
+                        information, specifications, approvals and other
+                        relevant project documentation.
+                    </p>
+
+                    <a href="{% url 'contact' %}" class="service-link">
+                        Request Information
+                        <i class="bi bi-arrow-right"></i>
+                    </a>
+
+                </div>
+            </div>
+
+
+            <!-- 06 -->
+            <div class="col-lg-4 col-md-6">
+                <div class="service-card">
+
+                    <div class="service-number">
+                        06
+                    </div>
+
+                    <div class="service-icon">
+                        <i class="bi bi-chat-dots"></i>
+                    </div>
+
+                    <h3>Responsive Communication</h3>
+
+                    <p>
+                        From initial enquiry to follow-up, KP Sales focuses
+                        on responsive communication and keeping every
+                        requirement moving forward.
+                    </p>
+
+                    <a href="{% url 'contact' %}" class="service-link">
+                        Contact Our Team
+                        <i class="bi bi-arrow-right"></i>
+                    </a>
+
+                </div>
+            </div>
+
         </div>
-    </section>
+
+    </div>
+</section>
+
+
+<!-- Bottom CTA -->
+<section class="services-cta">
+    <div class="container">
+        <div class="cta-box">
+
+            <div>
+                <span>NEED A CONSTRUCTION SOLUTION?</span>
+
+                <h2>
+                    Tell us what your project needs.
+                </h2>
+
+                <p>
+                    Our team will help coordinate the right product
+                    category and next steps.
+                </p>
+            </div>
+
+            <a href="{% url 'contact' %}" class="btn btn-premium">
+                Get a Quote
+                <i class="bi bi-arrow-right"></i>
+            </a>
+
+        </div>
+    </div>
+</section>
     {% endblock %}
   
