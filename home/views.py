@@ -149,5 +149,5 @@ def allproduct(request):
     return render(request,'products.html',{"pro":pro})
 
 def product(request):
-    
-    return render(request,'admixtures.html')
+    pro=Product.objects.filter(is_active=True)
+    return render(request,'admixtures.html',{"pro":pro})

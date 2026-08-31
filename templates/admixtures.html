@@ -496,39 +496,30 @@ Home | Solution Experts Plast
 
 
                     <!-- PRODUCT 1 -->
-
-                    <article class="product-card featured">
+                    {% for item in pro %}
+                    <article class="product-card {% if item.featured %} featured {% endif %}">
 
                         <div>
 
                             <h2 class="product-name">
 
-                                ShaliCryl® LM
+                                {{item.name}}
 
                             </h2>
 
                             <div class="product-subtitle">
 
-                                Energy Saving Micro Fiber Reinforced
-                                Acrylic Liquid Membrane
+                                {{item.subtitle}}
 
                             </div>
 
                             <div class="product-description">
 
                                 <p>
-                                    Single component, energy saving,
-                                    UV resistant, elastomeric,
-                                    micro fiber reinforced,
-                                    heavy duty monolithic /
-                                    seamless waterproofing liquid membrane.
+                                   {{item.description|safe}}
                                 </p>
 
-                                <p>
-                                    Suitable for demanding waterproofing
-                                    applications requiring a durable
-                                    seamless membrane.
-                                </p>
+                               
 
                             </div>
 
@@ -538,7 +529,7 @@ Home | Solution Experts Plast
                         <div class="product-actions">
 
                             <a
-                                href="#"
+                                href="{{item.tds_file.url}}"
                                 class="download-btn">
 
                                 <span>
@@ -550,7 +541,7 @@ Home | Solution Experts Plast
                             </a>
 
                             <a
-                                href="#"
+                                href="{{item.msds_file.url}}"
                                 class="download-btn">
 
                                 <span>
@@ -564,12 +555,13 @@ Home | Solution Experts Plast
                         </div>
 
                     </article>
+                    {% endfor %}
 
 
 
                     <!-- PRODUCT 2 -->
 
-                    <article class="product-card">
+                    <!-- <article class="product-card">
 
                         <div>
 
@@ -624,13 +616,13 @@ Home | Solution Experts Plast
 
                         </div>
 
-                    </article>
+                    </article> -->
 
 
 
                     <!-- PRODUCT 3 -->
 
-                    <article class="product-card featured">
+                    <!-- <article class="product-card featured">
 
                         <div>
 
@@ -681,13 +673,13 @@ Home | Solution Experts Plast
 
                         </div>
 
-                    </article>
+                    </article> -->
 
 
 
                     <!-- PRODUCT 4 -->
 
-                    <article class="product-card">
+                    <!-- <article class="product-card">
 
                         <div>
 
@@ -738,12 +730,12 @@ Home | Solution Experts Plast
 
                         </div>
 
-                    </article>
+                    </article> -->
 
 
 
                     <!-- PRODUCT 5 -->
-
+<!-- 
                     <article class="product-card featured">
 
                         <div>
@@ -794,13 +786,13 @@ Home | Solution Experts Plast
 
                         </div>
 
-                    </article>
+                    </article> -->
 
 
 
                     <!-- PRODUCT 6 -->
 
-                    <article class="product-card">
+                    <!-- <article class="product-card">
 
                         <div>
 
@@ -850,13 +842,13 @@ Home | Solution Experts Plast
 
                         </div>
 
-                    </article>
+                    </article> -->
 
 
 
                     <!-- PRODUCT 7 -->
 
-                    <article class="product-card featured">
+                    <!-- <article class="product-card featured">
 
                         <div>
 
@@ -906,13 +898,13 @@ Home | Solution Experts Plast
 
                         </div>
 
-                    </article>
+                    </article> -->
 
 
 
                     <!-- PRODUCT 8 -->
 
-                    <article class="product-card">
+                    <!-- <article class="product-card">
 
                         <div>
 
@@ -961,12 +953,12 @@ Home | Solution Experts Plast
 
                         </div>
 
-                    </article>
+                    </article> -->
 
 
 
                     <!-- PRODUCT 9 -->
-
+<!-- 
                     <article class="product-card featured">
 
                         <div>
@@ -1018,13 +1010,13 @@ Home | Solution Experts Plast
 
                         </div>
 
-                    </article>
+                    </article> -->
 
 
 
                     <!-- PRODUCT 10 -->
 
-                    <article class="product-card">
+                    <!-- <article class="product-card">
 
                         <div>
 
@@ -1073,7 +1065,7 @@ Home | Solution Experts Plast
 
                         </div>
 
-                    </article>
+                    </article> -->
 
 
                 </div>

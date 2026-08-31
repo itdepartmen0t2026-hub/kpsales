@@ -155,3 +155,6 @@ CKEDITOR_5_CONFIGS = {
         ],
     },
 }
+
+MEDIA_URL = '/media/'
+MEDIA_ROOT = BASE_DIR / 'media'
