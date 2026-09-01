@@ -16,8 +16,6 @@ Home | Solution Experts Plast
             height: 310px;
             position: relative;
 
-            background-image:
-                url("{% static 'assets/img/admixtures.jpg' %} ");
 
             background-size: cover;
             background-position: center;
@@ -449,7 +447,7 @@ Home | Solution Experts Plast
      CATEGORY BANNER
 ========================================= -->
 
-<section class="category-banner">
+<section class="category-banner" style="background-image: url('{{ pro_slug.image.url }}');">
 
     <div class="container">
 
@@ -463,7 +461,7 @@ Home | Solution Experts Plast
 
             <h1 class="category-title">
 
-                Waterproofing
+                {{pro_slug.name}}
 
             </h1>
 
@@ -496,6 +494,7 @@ Home | Solution Experts Plast
 
 
                     <!-- PRODUCT 1 -->
+                     {% if pro %}
                     {% for item in pro %}
                     <article class="product-card {% if item.featured %} featured {% endif %}">
 
@@ -555,7 +554,12 @@ Home | Solution Experts Plast
                         </div>
 
                     </article>
+                    
                     {% endfor %}
+
+                    {% else %}
+                        <p>No products found.</p>
+                    {% endif %}
 
 
 
@@ -1077,7 +1081,7 @@ Home | Solution Experts Plast
             <!-- =================================
                  RIGHT SIDEBAR
             ================================= -->
-
+             {% if pro  %}
             <div class="col-lg-4">
 
                 <aside class="sidebar">
@@ -1089,8 +1093,8 @@ Home | Solution Experts Plast
 
                         <input
                             type="text"
-                            placeholder="Search products"
-                        >
+                            placeholder="Search products" name="product" value="{{ request.GET.product }}">
+                        
 
                         <button type="submit">
 
@@ -1104,7 +1108,7 @@ Home | Solution Experts Plast
 
                     <!-- CATEGORY -->
 
-                    <h3 class="sidebar-title">
+                    <!-- <h3 class="sidebar-title">
 
                         Waterproofing Category
 
@@ -1235,12 +1239,13 @@ Home | Solution Experts Plast
 
                         </li>
 
-                    </ul>
+                    </ul> -->
 
 
                 </aside>
 
             </div>
+            {% endif %}
 
         </div>
 

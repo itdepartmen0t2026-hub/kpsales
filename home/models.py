@@ -5,14 +5,19 @@ from django_ckeditor_5.fields import CKEditor5Field
 class Product(models.Model):
 
     CATEGORY_CHOICES = [
-        ("waterproofing", "Waterproofing"),
-        ("flooring", "Flooring"),
-        ("road-surfacing", "Road Surfacing"),
-        ("restofix", "Restofix"),
+        ("Waterproofing", "Waterproofing"),
+        ("Flooring", "Flooring"),
+        ("Road Surfacing", "Road Surfacing"),
+        ("Restofix", "Restofix"),
     ]
 
     name = models.CharField(max_length=200)
-
+    slug = models.SlugField(
+            max_length=220,
+            unique=True,
+            blank=True
+        )
+    
     subtitle = models.CharField(
         max_length=300,
         blank=True
@@ -67,14 +72,13 @@ class Product(models.Model):
 
 from django.utils.text import slugify
 class ProductCategory(models.Model):
-
  
 
     name = models.CharField(max_length=200)
 
     slug = models.SlugField(
         max_length=220,
-        unique=True,
+        null=True,
         blank=True
     )
 

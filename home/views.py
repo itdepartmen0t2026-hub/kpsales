@@ -148,6 +148,13 @@ def allproduct(request):
     
     return render(request,'products.html',{"pro":pro})
 
-def product(request):
-    pro=Product.objects.filter(is_active=True)
-    return render(request,'admixtures.html',{"pro":pro})
+def product(request,slug):
+    products=request.GET.get('product')
+    if products:
+        pro=Product.objects.filter(name__exact=products)
+        pro_slug=ProductCategory.objects.get(slug=slug)
+        return render(request,'admixtures.html',{"pro":pro,'pro_slug':pro_slug})
+    pro_slug=ProductCategory.objects.get(slug=slug)
+    pro=Product.objects.filter(is_active=True,category=pro_slug.slug)
+    return render(request,'admixtures.html',{"pro":pro,'pro_slug':pro_slug})
+
