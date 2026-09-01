@@ -83,14 +83,14 @@ body {
 
 .eyebrow {
     color: var(--red);
-    font-size: .78rem;
+    font-size: 1.0rem;
     font-weight: 850;
     letter-spacing: 2px;
     text-transform: uppercase
 }
 
 .hero .eyebrow {
-    color: #ffd7d9
+    color: var(--red);
 }
 
 .display-title {
@@ -1574,4 +1574,312 @@ body {
     .hero-buttons .btn {
         font-size: 13px;
     }
+}
+
+/* ==============================
+   PRODUCT CATEGORY SLIDER
+================================ */
+
+.category-slider {
+    position: relative;
+    width: 100%;
+    overflow: hidden;
+}
+
+.category-slide {
+    position: relative;
+    height: 520px;
+
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    align-items: center;
+
+    overflow: hidden;
+}
+
+
+/* Dark overlay */
+
+.category-overlay {
+    position: absolute;
+    inset: 0;
+
+    background:
+        linear-gradient(
+            90deg,
+            rgba(0, 0, 0, 0.88) 0%,
+            rgba(0, 0, 0, 0.65) 45%,
+            rgba(0, 0, 0, 0.20) 100%
+        );
+}
+
+
+/* Content */
+
+.category-content {
+    position: relative;
+    z-index: 2;
+
+    max-width: 650px;
+
+    padding-top: 30px;
+}
+
+
+/* Small heading */
+
+.category-eyebrow {
+    display: inline-block;
+
+    color: #fff;
+    font-size: 14px;
+    font-weight: 700;
+    letter-spacing: 3px;
+
+    padding-left: 15px;
+
+    border-left: 4px solid #e31b23;
+
+    margin-bottom: 20px;
+
+    text-transform: uppercase;
+}
+
+
+/* Main heading */
+
+.category-content h1 {
+    color: #fff;
+
+    font-size: clamp(42px, 6vw, 72px);
+
+    line-height: 1.05;
+
+    font-weight: 800;
+
+    margin-bottom: 20px;
+
+    text-transform: uppercase;
+}
+
+
+/* Description */
+
+.category-content p {
+    color: rgba(255, 255, 255, 0.90);
+
+    font-size: 18px;
+
+    line-height: 1.7;
+
+    max-width: 600px;
+
+    margin-bottom: 30px;
+}
+
+
+/* Button */
+
+.category-btn {
+    display: inline-flex;
+
+    align-items: center;
+    gap: 12px;
+
+    background: #e31b23;
+    color: #fff;
+
+    padding: 14px 27px;
+
+    border-radius: 4px;
+
+    font-size: 15px;
+    font-weight: 700;
+
+    text-decoration: none;
+
+    transition: all 0.3s ease;
+}
+
+
+.category-btn:hover {
+    background: #fff;
+    color: #e31b23;
+
+    transform: translateX(5px);
+}
+
+
+.category-btn i {
+    transition: transform 0.3s ease;
+}
+
+
+.category-btn:hover i {
+    transform: translateX(5px);
+}
+
+
+/* ==============================
+   ARROWS
+================================ */
+
+.carousel-arrow {
+    width: 52px;
+    height: 52px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    border: 1px solid rgba(255,255,255,0.6);
+
+    border-radius: 50%;
+
+    background: rgba(0,0,0,0.35);
+
+    color: #fff;
+
+    font-size: 20px;
+
+    transition: all 0.3s ease;
+}
+
+
+.carousel-arrow:hover {
+    background: #e31b23;
+
+    border-color: #e31b23;
+
+    transform: scale(1.1);
+}
+
+
+/* ==============================
+   INDICATORS
+================================ */
+
+.category-slider .carousel-indicators {
+    bottom: 25px;
+
+    justify-content: flex-start;
+
+    padding-left: 12px;
+}
+
+
+.category-slider .carousel-indicators button {
+    width: 30px;
+    height: 4px;
+
+    margin: 0 5px;
+
+    border: 0;
+
+    opacity: 0.5;
+
+    transition: all 0.3s ease;
+}
+
+
+.category-slider .carousel-indicators button.active {
+    width: 55px;
+
+    background: #e31b23;
+
+    opacity: 1;
+}
+
+
+/* ==============================
+   SLIDE ANIMATION
+================================ */
+
+.carousel-fade .carousel-item {
+    opacity: 0;
+
+    transition:
+        opacity 1s ease-in-out;
+}
+
+
+.carousel-fade .carousel-item.active {
+    opacity: 1;
+}
+
+
+/* Zoom background */
+
+.carousel-item.active .category-slide {
+    animation: heroZoom 5s ease forwards;
+}
+
+
+@keyframes heroZoom {
+
+    from {
+        background-size: 100%;
+    }
+
+    to {
+        background-size: 108%;
+    }
+
+}
+
+
+/* Content animation */
+
+.carousel-item .category-content {
+    opacity: 0;
+
+    transform: translateY(40px);
+}
+
+
+.carousel-item.active .category-content {
+    animation: contentUp 1s ease 0.3s forwards;
+}
+
+
+@keyframes contentUp {
+
+    to {
+        opacity: 1;
+
+        transform: translateY(0);
+    }
+
+}
+@media (max-width: 768px) {
+
+    .category-slide {
+        height: 480px;
+
+        background-position: center;
+    }
+
+    .category-content {
+        padding: 30px 20px;
+    }
+
+    .category-content h1 {
+        font-size: 38px;
+    }
+
+    .category-content p {
+        font-size: 15px;
+        line-height: 1.6;
+    }
+
+    .carousel-control-prev,
+    .carousel-control-next {
+        display: none;
+    }
+
+    .category-slider .carousel-indicators {
+        padding-left: 20px;
+    }
+
 }

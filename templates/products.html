@@ -6,13 +6,100 @@ Home | Solution Experts Plast
 {% endblock %}
 {% block content %}
 {% load static %}
-    <header class="page-hero">
-        <div class="container">
-            <div class="eyebrow text-white">KP Sales</div>
-            <h1 class="display-5 fw-bold">Product Categories</h1>
-            <p class="lead">Explore the core construction chemical categories represented in our website.</p>
+    
+    
+    <section class="category-slider">
+
+    <div id="productCategoryCarousel"
+         class="carousel slide carousel-fade"
+         data-bs-ride="carousel"
+         data-bs-interval="4500">
+
+        <!-- Slides -->
+        <div class="carousel-inner">
+
+            {% for item in pro %}
+            <div class="carousel-item {% if forloop.first %}active{% endif %}">
+
+                <!-- Background Image -->
+                <div class="category-slide"
+                     style="background-image: url('{{ item.image.url }}');">
+
+                    <div class="category-overlay"></div>
+
+                    <div class="container">
+                        <div class="category-content">
+
+                            <div class="category-eyebrow">
+                                KP SALES
+                            </div>
+
+                            <h1>
+                                {{ item.name }}
+                            </h1>
+
+                            <p>
+                                {{ item.description|truncatewords:25 }}
+                            </p>
+
+                            <a href="{% url 'product' item.slug %}"
+                               class="category-btn">
+                                Explore Products
+                                <i class="bi bi-arrow-right"></i>
+                            </a>
+
+                        </div>
+                    </div>
+
+                </div>
+
+            </div>
+            {% endfor %}
+
         </div>
-    </header>
+
+        <!-- Previous -->
+        <button class="carousel-control-prev"
+                type="button"
+                data-bs-target="#productCategoryCarousel"
+                data-bs-slide="prev">
+
+            <span class="carousel-arrow">
+                <i class="bi bi-chevron-left"></i>
+            </span>
+
+        </button>
+
+        <!-- Next -->
+        <button class="carousel-control-next"
+                type="button"
+                data-bs-target="#productCategoryCarousel"
+                data-bs-slide="next">
+
+            <span class="carousel-arrow">
+                <i class="bi bi-chevron-right"></i>
+            </span>
+
+        </button>
+
+
+        <!-- Indicators -->
+        <div class="carousel-indicators">
+
+            {% for item in pro %}
+            <button type="button"
+                    data-bs-target="#productCategoryCarousel"
+                    data-bs-slide-to="{{ forloop.counter0 }}"
+                    class="{% if forloop.first %}active{% endif %}"
+                    aria-label="Slide {{ forloop.counter }}">
+            </button>
+            {% endfor %}
+
+        </div>
+
+    </div>
+
+</section>
   <section class="product-line-section">
 
     <div class="container">
@@ -32,10 +119,7 @@ Home | Solution Experts Plast
                     <img src="{{item.image.url}}"
                          alt="Waterproofing">
 
-                    <!-- <div class="product-overlay">
-                        <div class="plus-icon">+</div>
-                        <h3>Waterproofing</h3>
-                    </div> -->
+               
                          <div class="product-title">
                         {{item.name}}
                     </div>
